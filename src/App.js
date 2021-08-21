@@ -1,37 +1,138 @@
 import React, { useState, useEffect } from 'react'
 import {
   Box,
+  Grid,
+  Input,
+  Center,
+  Button,
+  Heading,
+  Progress,
+  InputGroup,
+  IconButton,
+  extendTheme,
   ChakraProvider,
   InputRightElement,
-  Button,
-  Input,
-  Grid,
-  Stack,
-  InputGroup,
-  theme,
 } from '@chakra-ui/react'
-import { ColorModeSwitcher } from './ColorModeSwitcher'
+import {
+  QuestionOutlineIcon
+} from '@chakra-ui/icons'
+
+import { Container } from './Container'
+import { GithubCorner } from './GitHubCorner'
+
+const audio = new (window.AudioContext || window.webkitAudioContext)()
 
 function App() {
-  const [audio, setAudio] = useState(new (window.AudioContext || window.webkitAudioContext)())
   const [success, setSuccess] = useState([])
   const [sounds, setSounds] = useState([])
   const [games, setGames] = useState([
     {
       game: 'Dota 2',
-      sfx: '/65243303.wav'
+      sfx: 'sounds/id1.mp3'
     },
     {
-      game: 'Borderlands 2',
-      sfx: '/65243303.wav'
+      game: 'Minecraft',
+      sfx: 'sounds/id2.mp3'
     },
     {
-      game: 'Half-Life 2',
-      sfx: '/65243303.wav'
+      game: 'Counter Strike',
+      sfx: 'sounds/id3.mp3'
     },
     {
-      game: 'Fuc\'k',
-      sfx: '/65243303.wav'
+      game: 'Crash Bandicoot',
+      sfx: '/sounds/id4.mp3'
+    },
+    {
+      game: 'Dark Souls',
+      sfx: 'sounds/id5.mp3'
+    },
+    {
+      game: 'Overwatch',
+      sfx: 'sounds/id6.mp3'
+    },
+    {
+      game: 'Among Us',
+      sfx: 'sounds/id7.mp3'
+    },
+    {
+      game: 'World of Warcraft',
+      sfx: 'sounds/id8.mp3'
+    },
+    {
+      game: 'Undertale',
+      sfx: 'sounds/id9.mp3'
+    },
+    {
+      game: 'World of Tanks',
+      sfx: 'sounds/id10.mp3'
+    },
+    {
+      game: 'Half-Life',
+      sfx: 'sounds/id11.mp3'
+    },
+    {
+      game: 'Grand Theft Auto: San Andreas',
+      sfx: 'sounds/id12.mp3'
+    },
+    {
+      game: 'Rocket League',
+      sfx: 'sounds/id13.mp3'
+    },
+    {
+      game: 'Call of Duty: Warzone',
+      sfx: 'sounds/id14.mp3'
+    },
+    {
+      game: 'Papers, Please',
+      sfx: 'sounds/id15.wav'
+    },
+    {
+      game: 'Fortnite',
+      sfx: 'sounds/id16.mp3'
+    },
+    {
+      game: 'Cyberpunk 2077',
+      sfx: 'sounds/id17.mp3'
+    },
+    {
+      game: 'The Witcher 3: Wild Hunt',
+      sfx: 'sounds/id18.mp3'
+    },
+    {
+      game: 'ROBLOX',
+      sfx: 'sounds/id19.mp3'
+    },
+    {
+      game: 'Apex Legends',
+      sfx: 'sounds/id20.mp3'
+    },
+    {
+      game: 'Rust',
+      sfx: 'sounds/id21.mp3'
+    },
+    {
+      game: 'Portal 2',
+      sfx: 'sounds/id22.mp3'
+    },
+    {
+      game: 'Pay Day 2',
+      sfx: 'sounds/id23.mp3'
+    },
+    {
+      game: 'Red Dead Redemption 2',
+      sfx: 'sounds/id24.mp3'
+    },
+    {
+      game: 'L.A. Noire',
+      sfx: 'sounds/id25.mp3'
+    },
+    {
+      game: 'Duke Nukem',
+      sfx: 'sounds/id26.mp3'
+    },
+    {
+      game: 'Path of Exile',
+      sfx: 'sounds/id27.mp3'
     }
   ])
 
@@ -83,39 +184,73 @@ function App() {
     source.start(0)
   }
 
+  const customTheme = extendTheme({
+    config: {
+      initialColorMode: 'dark',
+      useSystemColorMode: false
+    }
+  })
+
+  console.log(games);
+
+
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={customTheme} resetCSS>
       <Box textAlign="center" fontSize="xl">
+        <GithubCorner />
         <Grid p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+          <Heading p={4}>
+            SFX Game Quiz
+          </Heading>
         </Grid>
-        <Stack s={4} pl={4} pr={4}>
-          {games.map(({ game }, key) => (
-              <InputGroup key={key} size="md">
-                <Input
-                  p={4}
-                  onChange={(event) => checkGame(event, key)}
-                  variant="outline"
-                  placeholder={key + 1}
-                  isDisabled={success.includes(key)}
-                  _disabled={{ background: '#48BB78' }}
-                />
-                {!success.includes(key) &&
-                  <InputRightElement width="4.5rem">
-                    <Button
-                      h="1.75rem"
-                      size="sm"
-                      onClick={() => playSound(key)}
-                    >
-                      Play
-                    </Button>
-                  </InputRightElement>
-                }
-              </InputGroup>
+        <Container>
+          {games.map((_, key) => (
+            <InputGroup key={key} size="md">
+              <Input
+                p={4}
+                onChange={(event) => checkGame(event, key)}
+                variant="outline"
+                placeholder={`Sound №${key + 1}`}
+                isDisabled={success.includes(key)}
+                _disabled={{ background: '#48BB78' }}
+              />
+              {!success.includes(key) &&
+                <InputRightElement width="4.5rem">
+                  <Button
+                    h="1.75rem"
+                    size="sm"
+                    onClick={() => playSound(key)}
+                  >
+                    Play
+                  </Button>
+                </InputRightElement>
+              }
+
+            </InputGroup>
           ))}
-        </Stack>
-      </Box>
-    </ChakraProvider>
+        </Container>
+      </Box >
+      <Center>
+        <IconButton
+          aria-label="Search database"
+          icon={<QuestionOutlineIcon />}
+          _active={{
+
+
+          }}
+        />
+      </Center>
+      <Progress
+        max={games.length}
+        value={success.length}
+        height="30px"
+        m={4}
+      >
+      </Progress>
+      <Center>
+        {success.length}/{games.length}
+      </Center>
+    </ChakraProvider >
   );
 }
 
