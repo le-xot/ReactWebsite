@@ -17,7 +17,7 @@ export function ProgressBar({ games, guessed }) {
       height={height}
       m={4}
     >
-      <ProgressLabel fontSize={14}>{guessed.length}/{games.length}</ProgressLabel>
+      <ProgressLabel fontSize={18}>{guessed.length}/{games.length}</ProgressLabel>
     </CustomProgress>
   )
 }

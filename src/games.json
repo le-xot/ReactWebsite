@@ -118,5 +118,25 @@
   {
     "game": "Team Fortress 2",
     "sfx": "id30.mp3"
+  },
+  {
+    "game": "Tom Clancy’s Rainbow Six Siege",
+    "sfx": "id31.mp3"
+  },
+  {
+    "game": "Terraria",
+    "sfx": "id32.mp3"
+  },
+  {
+    "game": "Cuphead",
+    "sfx": "id33.mp3"
+  },
+  {
+    "game": "Sea of Thieves",
+    "sfx": "id34.mp3"
+  },
+  {
+    "game": "PUBG",
+    "sfx": "id34.mp3"
   }
 ]
