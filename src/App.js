@@ -7,14 +7,14 @@ import {
   Input,
   Button,
   Heading,
-  Progress,
   InputGroup,
-  ProgressLabel,
   InputRightElement
 } from '@chakra-ui/react'
 import { Loading } from './components/Loading'
 import { Container } from './components/Container'
+import { ProgressBar } from './components/ProgressBar'
 import { GithubCorner } from './components/GitHubCorner'
+import { Fire as Fireworks } from './components/Fire'
 import initialGames from './games.json'
 import styled from '@emotion/styled'
 
@@ -99,43 +99,31 @@ function App() {
         </Heading>
       </Grid>
       <Container>
-        {games.map(({ game }, key) => {
-          const placeholder = `Sound №${key + 1}`
-
-          return (
-            <InputGroup key={key} size="md">
-              <Input
-                variant="outline"
-                placeholder={placeholder}
-                disabled={guessed.includes(game)}
-                onChange={(event) => checkGame(event, game)}
-                _disabled={{ background: 'green.400' }}
-              />
-              {!guessed.includes(game) &&
-                <InputRightElement width="4rem">
-                  <Button
-                    h="1.75rem"
-                    size="sm"
-                    onClick={() => playSound(game)}
-                  >
-                    Play
-                  </Button>
-                </InputRightElement>
-              }
-            </InputGroup>
-          )
-        })}
+        {games.map(({ game }, key) => (
+          <InputGroup key={key} size="md">
+            <Input
+              variant="outline"
+              placeholder={`Sound №${key + 1}`}
+              disabled={guessed.includes(game)}
+              onChange={(event) => checkGame(event, game)}
+              _disabled={{ background: 'green.400' }}
+            />
+            {!guessed.includes(game) &&
+              <InputRightElement width="4rem">
+                <Button
+                  h="1.75rem"
+                  size="sm"
+                  onClick={() => playSound(game)}
+                >
+                  Play
+                </Button>
+              </InputRightElement>
+            }
+          </InputGroup>
+        ))}
       </Container>
-      <Progress
-        colorScheme="green"
-        max={games.length}
-        value={guessed.length}
-        borderRadius={4}
-        height="40px"
-        m={4}
-      >
-        <ProgressLabel fontSize={14}>{guessed.length}/{games.length}</ProgressLabel>
-      </Progress>
+      <ProgressBar games={games} guessed={guessed} />
+      {guessed.length === games.length && <Fireworks />}
     </Main>
   )
 }
