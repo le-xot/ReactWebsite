@@ -1,0 +1,110 @@
+[
+  {
+    "game": "Dota 2",
+    "sfx": "id1.mp3"
+  },
+  {
+    "game": "Minecraft",
+    "sfx": "id2.mp3"
+  },
+  {
+    "game": "Counter Strike",
+    "sfx": "id3.mp3"
+  },
+  {
+    "game": "Crash Bandicoot",
+    "sfx": "id4.mp3"
+  },
+  {
+    "game": "Dark Souls",
+    "sfx": "id5.mp3"
+  },
+  {
+    "game": "Overwatch",
+    "sfx": "id6.mp3"
+  },
+  {
+    "game": "Among Us",
+    "sfx": "id7.mp3"
+  },
+  {
+    "game": "World of Warcraft",
+    "sfx": "id8.mp3"
+  },
+  {
+    "game": "Undertale",
+    "sfx": "id9.mp3"
+  },
+  {
+    "game": "World of Tanks",
+    "sfx": "id10.mp3"
+  },
+  {
+    "game": "Half-Life",
+    "sfx": "id11.mp3"
+  },
+  {
+    "game": "Grand Theft Auto: San Andreas",
+    "sfx": "id12.mp3"
+  },
+  {
+    "game": "Rocket League",
+    "sfx": "id13.mp3"
+  },
+  {
+    "game": "Call of Duty: Warzone",
+    "sfx": "id14.mp3"
+  },
+  {
+    "game": "Papers, Please",
+    "sfx": "id15.wav"
+  },
+  {
+    "game": "Fortnite",
+    "sfx": "id16.mp3"
+  },
+  {
+    "game": "Cyberpunk 2077",
+    "sfx": "id17.mp3"
+  },
+  {
+    "game": "The Witcher 3: Wild Hunt",
+    "sfx": "id18.mp3"
+  },
+  {
+    "game": "ROBLOX",
+    "sfx": "id19.mp3"
+  },
+  {
+    "game": "Apex Legends",
+    "sfx": "id20.mp3"
+  },
+  {
+    "game": "Rust",
+    "sfx": "id21.mp3"
+  },
+  {
+    "game": "Portal 2",
+    "sfx": "id22.mp3"
+  },
+  {
+    "game": "Pay Day 2",
+    "sfx": "id23.mp3"
+  },
+  {
+    "game": "Red Dead Redemption 2",
+    "sfx": "id24.mp3"
+  },
+  {
+    "game": "L.A. Noire",
+    "sfx": "id25.mp3"
+  },
+  {
+    "game": "Duke Nukem",
+    "sfx": "id26.mp3"
+  },
+  {
+    "game": "Path of Exile",
+    "sfx": "id27.mp3"
+  }
+]
