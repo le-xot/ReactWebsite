@@ -106,5 +106,17 @@
   {
     "game": "Path of Exile",
     "sfx": "id27.mp3"
+  },
+  {
+    "game": "Civilization V",
+    "sfx": "id28.mp3"
+  },
+  {
+    "game": "Subnautica",
+    "sfx": "id29.mp3"
+  },
+  {
+    "game": "Team Fortress 2",
+    "sfx": "id30.mp3"
   }
 ]
