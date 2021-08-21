@@ -99,32 +99,28 @@ function App() {
         </Heading>
       </Grid>
       <Container>
-        {games.map(({ game }, key) => {
-          const placeholder = `Sound №${key + 1}`
-
-          return (
-            <InputGroup key={key} size="md">
-              <Input
-                variant="outline"
-                placeholder={placeholder}
-                disabled={guessed.includes(game)}
-                onChange={(event) => checkGame(event, game)}
-                _disabled={{ background: 'green.400' }}
-              />
-              {!guessed.includes(game) &&
-                <InputRightElement width="4rem">
-                  <Button
-                    h="1.75rem"
-                    size="sm"
-                    onClick={() => playSound(game)}
-                  >
-                    Play
-                  </Button>
-                </InputRightElement>
-              }
-            </InputGroup>
-          )
-        })}
+        {games.map(({ game }, key) => (
+          <InputGroup key={key} size="md">
+            <Input
+              variant="outline"
+              placeholder={`Sound №${key + 1}`}
+              disabled={guessed.includes(game)}
+              onChange={(event) => checkGame(event, game)}
+              _disabled={{ background: 'green.400' }}
+            />
+            {!guessed.includes(game) &&
+              <InputRightElement width="4rem">
+                <Button
+                  h="1.75rem"
+                  size="sm"
+                  onClick={() => playSound(game)}
+                >
+                  Play
+                </Button>
+              </InputRightElement>
+            }
+          </InputGroup>
+        ))}
       </Container>
       <Progress
         colorScheme="green"
