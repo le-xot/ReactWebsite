@@ -79,7 +79,7 @@ function App() {
     volume.gain.value = 0.5
     volume.connect(audioCtx.destination)
     source.connect(volume)
-    source.start(0)
+    source.start(0,0,6)
   }
 
   if (!sounds) {
@@ -105,12 +105,12 @@ function App() {
         {games.map(({ game }, key) => (
           <InputGroup key={key} size="md">
             <Input
-              style={{ userSelect: "none" }}
+              style={{ userSelect: "none"}}
               variant="outline"
               placeholder={`Sound №${key + 1}`}
               disabled={guessed.includes(game)}
               onChange={(event) => checkGame(event, game)}
-              _disabled={{ background: 'green.400' }}
+              _disabled={{background: 'green.400'}}
             />
             {!guessed.includes(game) &&
               <InputRightElement width="4rem">

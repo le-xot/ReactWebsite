@@ -170,5 +170,33 @@
   {
     "game": "The Binding of Isaac",
     "sfx": "id43.mp3"
+  },
+  {
+    "game": "Life Is Strange",
+    "sfx": "id44.mp3"
+  },
+  {
+    "game": "Enter the Gungeon",
+    "sfx": "id45.mp3"
+  },
+  {
+    "game": "BattleBlock Theater",
+    "sfx": "id46.mp3"
+  },
+  {
+    "game": "Duck Game",
+    "sfx": "id47.mp3"
+  },
+  {
+    "game": "Factorio",
+    "sfx": "id48.mp3"
+  },
+  {
+    "game": "Fall Guys",
+    "sfx": "id49.mp3"
+  },
+  {
+    "game": "Slime Rancher",
+    "sfx": "id50.mp3"
   }
 ]
