@@ -8,7 +8,7 @@
     "sfx": "id2.mp3"
   },
   {
-    "game": "Counter Strike",
+    "game": "Counter-Strike",
     "sfx": "id3.mp3"
   },
   {
@@ -137,6 +137,34 @@
   },
   {
     "game": "PUBG",
-    "sfx": "id34.mp3"
+    "sfx": "id35.mp3"
+  },
+  {
+    "game": "Borderlands",
+    "sfx": "id36.mp3"
+  },
+  {
+    "game": "The Elder Scrolls V: Skyrim",
+    "sfx": "id37.mp3"
+  },
+  {
+    "game": "Mortal Kombat",
+    "sfx": "id38.mp3"
+  },
+  {
+    "game": "Geometry Dash",
+    "sfx": "id39.mp3"
+  },
+  {
+    "game": "Grand Theft Auto: Vice City",
+    "sfx": "id40.mp3"
+  },
+  {
+    "game": "Tomb Raider",
+    "sfx": "id41.mp3"
+  },
+  {
+    "game": "Fallout: New Vegas",
+    "sfx": "id42.mp3"
   }
 ]
