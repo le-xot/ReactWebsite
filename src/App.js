@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import {
   Box,
+  Flex,
   Grid,
   Input,
   Button,
@@ -9,6 +10,7 @@ import {
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react'
+import { Loading } from './components/Loading'
 import { Container } from './components/Container'
 import { ProgressBar } from './components/ProgressBar'
 import { GithubCorner } from './components/GitHubCorner'
@@ -80,7 +82,13 @@ function App() {
     source.start(0)
   }
 
-
+  if (!sounds) {
+    return (
+      <Flex h="full" align="center" justify="center">
+        <Loading />
+      </Flex>
+    )
+  }
 
   return (
     <Main textAlign="center" fontSize="xl">
