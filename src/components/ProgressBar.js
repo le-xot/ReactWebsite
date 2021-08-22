@@ -16,6 +16,7 @@ export function ProgressBar({ games, guessed }) {
       borderRadius={4}
       height={height}
       m={4}
+      style={{ userSelect: "none" }}
     >
       <ProgressLabel fontSize={18}>{guessed.length}/{games.length}</ProgressLabel>
     </CustomProgress>

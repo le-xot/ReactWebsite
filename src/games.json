@@ -166,5 +166,9 @@
   {
     "game": "Fallout: New Vegas",
     "sfx": "id42.mp3"
+  },
+  {
+    "game": "The Binding of Isaac",
+    "sfx": "id43.mp3"
   }
 ]

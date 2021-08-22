@@ -3,14 +3,12 @@ import React, { useState, useEffect } from 'react'
 import {
   Box,
   Grid,
-  Flex,
   Input,
   Button,
   Heading,
   InputGroup,
-  InputRightElement
+  InputRightElement,
 } from '@chakra-ui/react'
-import { Loading } from './components/Loading'
 import { Container } from './components/Container'
 import { ProgressBar } from './components/ProgressBar'
 import { GithubCorner } from './components/GitHubCorner'
@@ -82,26 +80,24 @@ function App() {
     source.start(0)
   }
 
-  if (!sounds) {
-    return (
-      <Flex h="full" align="center" justify="center">
-        <Loading />
-      </Flex>
-    )
-  }
+
 
   return (
     <Main textAlign="center" fontSize="xl">
       <GithubCorner />
       <Grid p={3}>
-        <Heading p={4}>
+        <Heading p={4}
+          style={{ userSelect: "none" }}
+        >
           SFX Game Quiz
+
         </Heading>
       </Grid>
       <Container>
         {games.map(({ game }, key) => (
           <InputGroup key={key} size="md">
             <Input
+              style={{ userSelect: "none" }}
               variant="outline"
               placeholder={`Sound №${key + 1}`}
               disabled={guessed.includes(game)}
