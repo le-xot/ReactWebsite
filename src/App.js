@@ -25,7 +25,6 @@ function App() {
   const [sounds, setSounds] = useState()
   const [games, setGames] = useState(initialGames)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => fetchSfx(), [])
 
   const fetchSfx = async () => {
@@ -80,6 +79,7 @@ function App() {
     volume.connect(audioCtx.destination)
     source.connect(volume)
     source.start(6)
+    console.log(source.buffer);
   }
 
   if (!sounds) {
@@ -90,7 +90,7 @@ function App() {
     )
   }
 
-  return (
+    return (
     <Main textAlign="center" fontSize="xl">
       <GithubCorner />
       <Grid p={3}>
@@ -98,7 +98,6 @@ function App() {
           style={{ userSelect: "none" }}
         >
           SFX Game Quiz
-
         </Heading>
       </Grid>
       <Container>
