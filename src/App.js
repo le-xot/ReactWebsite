@@ -75,7 +75,7 @@ function App() {
     }
 
     source.buffer = sound.buffer
-    volume.gain.value = 0.5
+    volume.gain.value = 1
     volume.connect(audioCtx.destination)
     source.connect(volume)
     source.start(6)
