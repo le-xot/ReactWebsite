@@ -3,10 +3,10 @@ import styled from '@emotion/styled'
 
 export function ProgressBar({ games, guessed }) {
   const height = useBreakpointValue({
-    base: '8rem',
-    sm: '4rem',
+    base: '10rem',
+    sm: '5rem',
     md: '2.5rem',
-    lg: '2.5rem'
+    lg: '2rem'
   })
 
   return (
@@ -15,7 +15,7 @@ export function ProgressBar({ games, guessed }) {
       value={guessed.length}
       borderRadius={4}
       height={height}
-      m={4}
+      m={3}
       style={{ userSelect: "none" }}
     >
       <ProgressLabel fontSize={18}>{guessed.length}/{games.length}</ProgressLabel>

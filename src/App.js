@@ -79,7 +79,7 @@ function App() {
     volume.gain.value = 0.5
     volume.connect(audioCtx.destination)
     source.connect(volume)
-    source.start(0,0,6)
+    source.start(6)
   }
 
   if (!sounds) {

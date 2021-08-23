@@ -52,7 +52,7 @@
     "sfx": "id13.mp3"
   },
   {
-    "game": "Warzone",
+    "game": "Call of Duty: Warzone",
     "sfx": "id14.mp3"
   },
   {
@@ -108,7 +108,7 @@
     "sfx": "id27.mp3"
   },
   {
-    "game": "Civilization 5",
+    "game": "Sid Meier’s Civilization 5",
     "sfx": "id28.mp3"
   },
   {
@@ -120,7 +120,7 @@
     "sfx": "id30.mp3"
   },
   {
-    "game": "Rainbow Six Siege",
+    "game": "Tom Clancy's Rainbow Six Sieges",
     "sfx": "id31.mp3"
   },
   {
@@ -144,7 +144,7 @@
     "sfx": "id36.mp3"
   },
   {
-    "game": "Skyrim",
+    "game": "The Elder Scrolls V: Skyrim",
     "sfx": "id37.mp3"
   },
   {
@@ -164,7 +164,7 @@
     "sfx": "id41.mp3"
   },
   {
-    "game": "Fallout",
+    "game": "Fallout New Vegas",
     "sfx": "id42.mp3"
   },
   {
@@ -198,5 +198,85 @@
   {
     "game": "Slime Rancher",
     "sfx": "id50.mp3"
+  },
+  {
+    "game": "Diablo 3",
+    "sfx": "id51.mp3"
+  },
+  {
+    "game": "Heroes of Might and Magic 3",
+    "sfx": "id52.mp3"
+  },
+  {
+    "game": "Assassin's Creed",
+    "sfx": "id53.mp3"
+  },
+  {
+    "game": "S.T.A.L.K.E.R.",
+    "sfx": "id54.mp3"
+  },
+  {
+    "game": "Mass Effect",
+    "sfx": "id55.m4a"
+  },
+  {
+    "game": "Battlefield 4",
+    "sfx": "id56.mp3"
+  },
+  {
+    "game": "Bioshock",
+    "sfx": "id57.mp3"
+  },
+  {
+    "game": "Hitman 2",
+    "sfx": "id58.mp3"
+  },
+  {
+    "game": "Quake",
+    "sfx": "id59.mp3"
+  },
+  {
+    "game": "The Sims 3",
+    "sfx": "id60.mp3"
+  },
+  {
+    "game": "Starcraft 2",
+    "sfx": "id61.mp3"
+  },
+  {
+    "game": "Deep Rock Galactic",
+    "sfx": "id62.mp3"
+  },
+  {
+    "game": "Worms",
+    "sfx": "id63.mp3"
+  },
+  {
+    "game": "Frostpunk",
+    "sfx": "id64.mp3"
+  },
+  {
+    "game": "Plants vs Zombies",
+    "sfx": "id65.mp3"
+  },
+  {
+    "game": "Hearthstone",
+    "sfx": "id66.mp3"
+  },
+  {
+    "game": "Watch Dogs",
+    "sfx": "id67.mp3"
+  },
+  {
+    "game": "Red Dead Redemption",
+    "sfx": "id68.mp3"
+  },
+  {
+    "game": "Neighbours from Hell",
+    "sfx": "id69.mp3"
+  },
+  {
+    "game": "DOOM",
+    "sfx": "id70.mp3"
   }
 ]
