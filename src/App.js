@@ -25,6 +25,8 @@ function App() {
   const [sounds, setSounds] = useState()
   const [games, setGames] = useState(initialGames)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => fetchSfx(), [])
 
   const fetchSfx = async () => {
