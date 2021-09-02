@@ -21,6 +21,7 @@ import styled from '@emotion/styled'
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)()
 
 function App() {
+  const [sources, setSources] = useState([])
   const [guessed, setGuessed] = useState([])
   const [sounds, setSounds] = useState()
   const [games, setGames] = useState(initialGames)
@@ -66,21 +67,27 @@ function App() {
     }
   }
 
-  const playSound = (game) => {
-    const source = audioCtx.createBufferSource()
+  const playSound = (game, key) => {
+    for (let i = 0; i < sounds.length; i++) {
+      if (sources[i]) {
+        sources[i].currentTime = 0
+        sources[i].stop(0)
+      }
+    }
+
     const sound = sounds.find(v => v.game === game)
+    const source = audioCtx.createBufferSource()
     const volume = audioCtx.createGain()
 
     if (process.env.NODE_ENV === 'development') {
       console.log(sound)
     }
 
+    sources[key] = source
     source.buffer = sound.buffer
-    volume.gain.value = 1
-    volume.connect(audioCtx.destination)
-    source.connect(volume)
-    source.start(6)
-    console.log(source.buffer);
+    volume.gain.value = 0.5
+    source.connect(audioCtx.destination)
+    source.start(0)
   }
 
   if (!sounds) {
@@ -117,7 +124,7 @@ function App() {
                 <Button
                   h="1.75rem"
                   size="sm"
-                  onClick={() => playSound(game)}
+                  onClick={() => playSound(game,key)}
                 >
                   Play
                 </Button>
