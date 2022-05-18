@@ -46,16 +46,7 @@ function App() {
   }
 
   const formatStr = (str) => {
-    return str
-      .split(' ')
-      .join('')
-      .toLowerCase()
-      .replaceAll('’', '')
-      .replaceAll('\'', '')
-      .replaceAll('-', '')
-      .replaceAll('.', '')
-      .replaceAll(',', '')
-      .replaceAll(':', '')
+    return str.match(/([A-Za-z0-9])/gm).join("").toLowerCase();
   }
 
   const checkGame = (event, game) => {
